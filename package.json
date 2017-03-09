@@ -1,0 +1,79 @@
+{
+  "name": "pardot-emails",
+  "version": "1.0.0",
+  "description": "Collection of responsive email templates to make your life in Pardot easier.",
+  "keywords": [
+    "MBO Partners",
+    "Pardot",
+    "Email",
+    "Responsive Email",
+    "Boilerplate"
+  ],
+  "homepage": "https://www.mbopartners.com",
+  "author": [
+    "MBO Partners, Inc. <webmaster@mbopartners.com> (https://www.mbopartners.com/)"
+  ],
+  "contributors": [
+    "Bruce Bentley <bbentley@mbopartners.com> (https://github.com/brucebentley/)"
+  ],
+  "main": "gulpfile.babel.js",
+  "engines": {
+    "node": ">=7.4.0"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp --production",
+    "zip": "gulp zip --production",
+    "litmus": "gulp litmus --production",
+    "mail": "gulp mail --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mbopartnersinc/pardot-emails.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mbopartnersinc/pardot-emails/issues"
+  },
+  "dependencies": {
+    "foundation-emails": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.7.2",
+    "beepbeep": "^1.2.0",
+    "browser-sync": "^2.11.0",
+    "colors": "^1.1.2",
+    "gulp": "git+https://github.com/gulpjs/gulp.git#4.0",
+    "gulp-awspublish": "^3.0.1",
+    "gulp-cli": "^1.1.0",
+    "gulp-html-src": "^1.0.0",
+    "gulp-htmlmin": "^1.1.1",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-inline-css": "^3.0.0",
+    "gulp-litmus": "0.0.7",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-mail": "^0.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uncss": "^1.0.1",
+    "gulp-zip": "^3.2.0",
+    "inky": "^1.3.6",
+    "lazypipe": "^1.0.1",
+    "merge-stream": "^1.0.0",
+    "panini": "^1.3.0",
+    "rimraf": "^2.3.3",
+    "siphon-media-query": "^1.0.0",
+    "yargs": "^4.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "license": "MIT",
+  "private": true
+}
