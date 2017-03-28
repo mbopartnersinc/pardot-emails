@@ -52,3 +52,21 @@
         }
     }
 
+
+///
+///  PREHEADER
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    span.preheader {
+        color: $body-background;    // needs to match background color of it's container
+        display: none !important;
+        font-size: 1px;
+        line-height: 1px;
+        max-height: 0px;
+        max-width: 0px;
+        mso-hide: all !important;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+

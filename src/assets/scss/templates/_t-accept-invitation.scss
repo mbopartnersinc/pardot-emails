@@ -13,17 +13,15 @@
     .row__signature {
 
         p {
-            &:not {
-                .user-signature {
-                    font-size: $h6-font-size;
-                    line-height: floor($h6-font-size * 1.625);
+            &:not(.user-signature) {
+                font-size: $h5-font-size;
+                line-height: ceil($h5-font-size * 1.5);
 
-                    b, strong {
-                        @include opensans-semibold;
-                    }
-                    a {
-                        @include opensans-semibold;
-                    }
+                b, strong {
+                    @include opensans-semibold;
+                }
+                a {
+                    @include opensans-semibold;
                 }
             }
         }
@@ -39,10 +37,10 @@
                         color: $white;
                         display: inline-block;
                         font-size: $global-font-size;
-                        height: ($spacer * 4.5);
-                        line-height: ($spacer * 4.5);
+                        height: ($spacer * 4.4);        /// ~44px
+                        line-height: ($spacer * 4.4);   /// ~44px
                         padding: 0;
-                        width: ($spacer * 17.6);    /// MAKES THE BUTTON WIDTH 180px.
+                        width: ($spacer * 19.6);        /// MAKES THE BUTTON WIDTH 200px.
                         -webkit-text-size-adjust: none;
                         mso-hide: all;
                     }
@@ -59,10 +57,93 @@
 ///  SIGNATURE
 /// - - - - - - - - - - - - - - - - - - - - - - - - -
 ///
-    .row__accept-invitation,
     .row__signature {
-        p.user-signature {
-            line-height: 1.5 !important;
+        .user-signature {
+            color: $mbo-black-light;
+            font-family: $body-font-family;
+            font-size: $global-font-size;
+            line-height: $global-line-height;
+
+            .name {
+                font-weight: $font-weight-semibold;
+            }
+
+            .address,
+            .phone,
+            .fax,
+            .mobile,
+            .email,
+            .website,
+            .social {
+                &,
+                & a {
+                    &,
+                    &:active,
+                    &:focus,
+                    &:hover,
+                    &:visited {
+                        font-family: $body-font-family !important;
+                        font-size: $global-font-size !important;
+                        line-height: $global-line-height !important;
+                    }
+                }
+            }
+
+            .address,
+            .phone,
+            .fax,
+            .mobile,
+            .email,
+            .website {
+                &,
+                & a {
+                    &,
+                    &:active,
+                    &:focus,
+                    &:hover,
+                    &:visited {
+                        color: $mbo-black-light !important;
+                        text-decoration: none !important;
+                    }
+                }
+            }
+            .email,
+            .website,
+            .social {
+                a {
+                    &,
+                    &:active,
+                    &:focus,
+                    &:hover,
+                    &:visited {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+
+            .social {
+                a {
+                    &,
+                    &:active,
+                    &:focus,
+                    &:hover,
+                    &:visited {
+                        color: $mbo-red-dark !important;
+                    }
+                }
+            }
+
+            strong, b {
+                font-weight: $font-weight-bold;
+                margin-right: 3px;
+            }
+
+            .divider {
+                color: #e0e0e0;
+                font-family: $body-font-family;
+                font-size: $global-font-size;
+                line-height: $global-line-height;
+            }
         }
     }
 
