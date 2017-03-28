@@ -1,0 +1,68 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  ACCEPT INVITATION
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+///
+///  BASE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .row__accept-invitation,
+    .row__signature {
+
+        p {
+            &:not {
+                .user-signature {
+                    font-size: $h6-font-size;
+                    line-height: floor($h6-font-size * 1.625);
+
+                    b, strong {
+                        @include opensans-semibold;
+                    }
+                    a {
+                        @include opensans-semibold;
+                    }
+                }
+            }
+        }
+
+
+        /** ACCEPT INVITATION BUTTON **/
+        table.button {
+            &.btn__accept-invite {
+                table {
+                    a {
+                        @include border-radius($button-radius);
+                        border: $button-border-width solid $mbo-red;
+                        color: $white;
+                        display: inline-block;
+                        font-size: $global-font-size;
+                        height: ($spacer * 4.5);
+                        line-height: ($spacer * 4.5);
+                        padding: 0;
+                        width: ($spacer * 17.6);    /// MAKES THE BUTTON WIDTH 180px.
+                        -webkit-text-size-adjust: none;
+                        mso-hide: all;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+///
+///  SIGNATURE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .row__accept-invitation,
+    .row__signature {
+        p.user-signature {
+            line-height: 1.5 !important;
+        }
+    }
+
