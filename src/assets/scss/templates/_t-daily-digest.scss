@@ -1,0 +1,30 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  DAILY DIGEST TEMPLATE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+///
+///  CORE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+
+
+///
+///  FIXED HEIGHT CARDS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .card__fixed-height {
+        &.section__matches,
+        &.section__respondents {
+            table.callout {
+                height: ($spacer * 20);    /// ~200px
+            }
+        }
+    }
+
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300px" height="80px" viewBox="0 0 300 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>bg-header</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="5.06029769%" y1="28.0814427%" x2="94.9397023%" y2="71.9185573%" id="linearGradient-1">
+            <stop stop-color="#F84B4B" offset="0%"></stop>
+            <stop stop-color="#55C8FC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bg-header" fill="url(#linearGradient-1)">
+            <path d="M-12.7332613,51.930262 C62.0060142,73.3367208 141.558945,143.764723 181.041718,182.069629 L213.261808,148.550963 L250.180183,110.14711 L311.17703,46.691886 C236.438977,25.2866133 156.88242,-45.1425312 117.399646,-83.447438 L-12.7332613,51.930262" id="Fill-5-path-Copy-10" style="mix-blend-mode: lighten;" opacity="0.601154384" transform="translate(149.221884, 49.311096) rotate(79.000000) translate(-149.221884, -49.311096) "></path>
+            <path d="M117.502024,-92.5063707 L-12.6308833,42.8713293 C62.1083921,64.2777881 141.661323,134.70579 181.144096,173.010697 L213.364186,139.49203 L250.282561,101.088177 L311.279407,37.6329533 C236.541354,16.2276806 156.984798,-54.2014639 117.502024,-92.5063707 L117.502024,-92.5063707 L117.502024,-92.5063707" id="Fill-5-path-Copy-9" style="mix-blend-mode: lighten;" opacity="0.602903451" transform="translate(149.324262, 40.252163) rotate(28.000000) translate(-149.324262, -40.252163) "></path>
+            <path d="M70.6704811,-34.5193235 L-59.4624265,100.858377 C15.2768489,122.264835 94.8297794,192.692837 134.312553,230.997744 L166.532642,197.479077 L203.451018,159.075224 L264.447864,95.6200005 C189.709811,74.2147278 110.153255,3.78558328 70.6704811,-34.5193235 L70.6704811,-34.5193235 L70.6704811,-34.5193235" id="Fill-5-path-Copy-8" style="mix-blend-mode: lighten;" opacity="0.602903451" transform="translate(102.492719, 98.239210) rotate(53.000000) translate(-102.492719, -98.239210) "></path>
+            <path d="M148.803743,2.74599682 L18.6708351,138.123697 C93.4101106,159.530156 172.963041,229.958158 212.445815,268.263064 L244.665904,234.744397 L281.58428,196.340545 L342.581126,132.885321 C267.843073,111.480048 188.286517,41.0509036 148.803743,2.74599682 L148.803743,2.74599682 L148.803743,2.74599682" id="Fill-5-path-Copy-7" style="mix-blend-mode: lighten;" opacity="0.602903451" transform="translate(180.625981, 135.504531) rotate(124.000000) translate(-180.625981, -135.504531) "></path>
+        </g>
+    </g>
+</svg>

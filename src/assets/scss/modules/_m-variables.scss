@@ -1,0 +1,410 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  GLOBAL SASS VARIABLES
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  Variable format should follow the `$component-modifier-state-property` order.
+///
+
+
+///
+///  TABLE OF CONTENTS
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    ///  1.  COLORS
+    ///  2.  SPACING
+    ///  3.  BODY
+    ///  4.  GRID BREAKPOINTS
+    ///  5.  GRID
+    ///  6.  BLOCK GRID
+    ///  7.  TYPOGRAPHY
+    ///  8.  BUTTON(S)
+    ///  9.  CALLOUT(S)
+    /// 10.  MENU(S)
+    /// 11.  THUMBNAIL(S)
+    /// 12.  ADDITIONAL COMPONENTS
+    ///        -
+    ///        -
+    ///        -
+    ///        -
+
+
+///
+///  FUNCTION(S)
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  Replace `$search` with `$replace` in `$string`
+///  @author Hugo Giraudel
+///  @param  {String} $string - Initial string
+///  @param  {String} $search - Substring to replace
+///  @param  {String} $replace ('') - New value
+///  @return {String} - Updated string
+///
+
+    @mixin _assert-ascending($map, $map-name) {
+        $prev-key: null;
+        $prev-num: null;
+        @each $key,
+        $num in $map {
+            @if $prev-num==null {
+                /// DO NOTHING
+            }
+            @else if not comparable($prev-num, $num) {
+                @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+            }
+            @else if $prev-num >=$num {
+                @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+            }
+            $prev-key: $key;
+            $prev-num: $num;
+        }
+    }
+
+    @function str-replace($string, $search, $replace: "") {
+        $index: str-index($string, $search);
+        @if $index {
+            @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+        }
+        @return $string;
+    }
+
+    @mixin _assert-starts-at-zero($map) {
+        $values: map-values($map);
+        $first-value: nth($values, 1);
+        @if $first-value !=0 {
+            @warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
+        }
+    }
+
+
+///
+///  COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  Grayscale and brand colors for use across the application.
+///
+
+    $dark-gray:                 $mbo-black-dark   !default;
+    $gray:                      $mbo-black        !default;
+    $medium-gray:               $silver           !default;
+    $light-gray:                $mbo-black-light  !default;
+    $lighter-gray:              $smoke            !default;
+    $lightest-gray:             $snow             !default;
+
+    $primary-color:             $mbo-blue         !default;
+    $secondary-color:           $dark-gray        !default;
+    $success-color:             #95bf15           !default;
+    $info-color:                #55c8fc           !default;
+    $warning-color:             #ffc82c           !default;
+    $alert-color:               $error-color      !default;
+    $danger-color:              $error-color      !default;
+    $pre-color:                 $code-text-color  !default;
+
+
+///
+///  OPTIONS
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  Quickly modify global styling by enabling or
+///  disabling optional features.
+///
+    $enable-flex:               false   !default;
+    $enable-rounded:            true    !default;
+    $enable-shadows:            false   !default;
+    $enable-gradients:          false   !default;
+    $enable-transitions:        true    !default;
+    $enable-hover-media-query:  false   !default;
+    $enable-grid-classes:       false   !default;
+    $enable-print-styles:       false   !default;
+
+
+///
+///  SPACING
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  Control the default styling of most Bootstrap elements by modifying these
+///  variables. Mostly focused on spacing.
+///  You can add more entries to the $spacers map, should you need more variation.
+///
+
+    $spacer:                    10px              !default;    /// ~10px
+    $spacer-x:                  $spacer           !default;    /// ~10px
+    $spacer-y:                  $spacer           !default;    /// ~10px
+    $spacers: (
+        0: (
+            x: 0,
+            y: 0
+        ),
+        1: (
+            x: ($spacer-x * .25),
+            y: ($spacer-y * .25)
+        ),
+        2: (
+            x: ($spacer-x * .5),
+            y: ($spacer-y * .5)
+        ),
+        3: (
+            x: $spacer-x,
+            y: $spacer-y
+        ),
+        4: (
+            x: ($spacer-x * 1.5),
+            y: ($spacer-y * 1.5)
+        ),
+        5: (
+            x: ($spacer-x * 3),
+            y: ($spacer-y * 3)
+        )
+    );
+
+    $global-margin:             ($spacer * 1.5)   !default;    /// ~15px
+    $global-padding:            ($spacer * 1.5)   !default;    /// ~15px
+    $global-radius:             2px               !default;
+    $global-rounded:            ($spacer * 50.0)  !default;    /// ~500px
+
+
+///
+///  BODY
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  Settings for the `<body>` element.
+///
+
+    $body-background:           $body-bg          !default;
+    $body-color:                $gray             !default;
+    $inverse-bg:                $dark-gray        !default;
+    $inverse-color:             $light-gray       !default;
+    $container-background:      $white            !default;
+
+
+///
+///  GRID BREAKPOINTS
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  Define the minimum dimensions at which your layout
+///  will change, adapting to different screen sizes,
+///  for use in media queries.
+///
+
+    $global-width:              ($spacer * 60.0)                            !default;    /// ~600px
+    $global-width-small:        95%                                         !default;
+    $global-gutter:             ($spacer * 3)                               !default;    /// ~30px
+    $global-breakpoint:         ($global-width - ($spacer * 0.4))           !default;    /// ~596px
+
+
+///
+///  GRID
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    $grid-column-count:         12                                          !default;
+    $column-padding-bottom:     $global-padding                             !default;
+    $container-radius:          0                                           !default;
+
+
+///
+///  BLOCK-GRID
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    $block-grid-max:            8                                           !default;
+    $block-grid-gutter:         ($global-gutter / 3)                        !default;
+
+
+///
+///  TYPOGRAPHY
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    $font-family-sans-serif:    -apple-system, BlinkMacSystemFont, 'Open Sans', Helvetica, Arial, sans-serif    !default;
+    // $font-family-sans-serif:    'Open Sans', Helvetica, Arial, sans-serif                                       !default;
+    $font-family-serif:         Georgia, Times New Roman, Times, serif                                          !default;
+    $font-family-monospace:     Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace                !default;
+    $font-family-base:          $font-family-sans-serif                                                         !default;
+
+    $font-weight-light:         300                                         !default;
+    $font-weight-regular:       400                                         !default;
+    $font-weight-semibold:      600                                         !default;
+    $font-weight-bold:          700                                         !default;
+    $font-weight-extrabold:     800                                         !default;
+
+    $global-font-color:         $body-color                                 !default;
+    $body-font-family:          $font-family-base                           !default;
+    $global-font-weight:        $font-weight-regular                        !default;
+
+    $global-font-size:          14px                                        !default;    /// ~14px
+    $global-line-height:        1.3                                         !default;    /// ~1.3
+    $body-line-height:          $global-line-height                         !default;
+
+    $header-color:              inherit                                     !default;
+    $header-font-family:        $body-font-family                           !default;
+    $header-font-weight:        $font-weight-bold                           !default;
+
+    $h1-font-size:              44px                                        !default;    /// ~34px
+    $h2-font-size:              36px                                        !default;    /// ~30px
+    $h3-font-size:              24px                                        !default;    /// ~28px
+    $h4-font-size:              20px                                        !default;    /// ~24px
+    $h5-font-size:              18px                                        !default;    /// ~20px
+    $h6-font-size:              16px                                        !default;    /// ~18px
+    $header-margin-bottom:      $spacer                                     !default;    /// ~10px
+
+    $subheader-line-height:     1.4                                         !default;    /// ~1.4
+    $subheader-color:           $dark-gray                                  !default;
+    $subheader-font-weight:     $global-font-weight                         !default;
+    $subheader-margin-top:      4px                                         !default;    /// ~4px
+    $subheader-margin-bottom:   8px                                         !default;    /// ~8px
+
+    $paragraph-margin-bottom:   $spacer                                     !default;    /// ~10px
+    $caption-font-size:         $global-font-size                           !default;    /// ~14px
+    $caption-font-color:        $gray                                       !default;    /// $mbo-black
+    $caption-font-weight:       $font-weight-regular                        !default;
+    $caption-line-height:       1.5                                         !default;
+    $small-font-size:           80%                                         !default;    /// ~80%
+    $small-font-color:          $medium-gray                                !default;    /// $silver
+    $lead-font-size:            ($global-font-size * 1.25)                  !default;    /// ~20px
+    $lead-line-height:          1.5                                         !default;    /// ~1.6
+    $text-padding:              10px                                        !default;    /// ~10px
+
+    $border-width:              1px                                         !default;    /// ~1px
+
+    $hr-width:                  $global-width                               !default;
+    $hr-border-width:           ($border-width / 2)                         !default;
+    $hr-color:                  $smoke                                      !default;
+    $hr-border:                 $hr-border-width solid $hr-color            !default;
+    $hr-margin:                 0 auto                                      !default;    /// ~20px auto
+    $hr-padding:                $global-margin $global-gutter               !default;    /// ~15px 30px
+
+    $anchor-color:              $dark-gray                                  !default;
+    $anchor-text-decoration:    underline                                   !default;
+    $anchor-color-visited:      $dark-gray                                  !default;
+    $anchor-color-hover:        $mbo-red                                    !default;
+    $anchor-color-active:       $anchor-color-hover                         !default;
+    $stat-font-size:            40px                                        !default;    /// ~40px
+
+
+
+///
+///  BUTTON(S)
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    ///  PADDING INSIDE BUTTONS AT VARIOUS SIZES.
+    ///  @type Map
+    $button-padding: (
+        tiny:     0 10px 0 10px,
+        small:    0 10px 0 10px,
+        default:  0 10px 0 10px,
+        large:    0 15px 0 15px,
+    )    !default;
+
+    ///  FONT SIZES OF BUTTONS AT VARIOUS SIZES.
+    ///  @type Map
+    $button-font-size: (
+        tiny:     14px,
+        small:    14px,
+        default:  14px,
+        large:    20px,
+    )    !default;
+
+    ///  LINE HEIGHT OF BUTTONS AT VARIOUS SIZES.
+    ///  @type Map
+    $button-line-height: (
+        tiny:             24px,
+        small:            26px,
+        default:          31px,
+        large:            45px,
+
+        tiny-outline:     28px,
+        small-outline:    30px,
+        default-outline:  35px,
+        large-outline:    49px,
+    )    !default;
+
+    $button-border-width:       ($border-width * 2)                     !default;    /// ~2px
+    $button-color-alt:          $medium-gray                            !default;
+    $button-font-weight:        700                                     !default;
+    $button-margin:             0 0 $global-margin 0                    !default;
+    $button-radius:             3px                                     !default;
+    $button-rounded:            $global-rounded                         !default;
+
+    $button-color:              $white                                  !default;
+    $button-bg:                 $primary-color                          !default;
+    $button-border:             $button-bg                              !default;
+
+    $button-primary-color:      $white                                  !default;
+    $button-primary-bg:         $mbo-red                                !default;
+    $button-primary-border:     $button-primary-bg                      !default;
+
+    $button-secondary-color:    $white                                  !default;
+    $button-secondary-bg:       $gray                                   !default;
+    $button-secondary-border:   $button-secondary-bg                    !default;
+
+    $button-info-color:         $white                                  !default;
+    $button-info-bg:            $info-color                             !default;
+    $button-info-border:        $button-info-bg                         !default;
+
+    $button-success-color:      $white                                  !default;
+    $button-success-bg:         $success-color                          !default;
+    $button-success-border:     $button-success-bg                      !default;
+
+    $button-warning-color:      $white                                  !default;
+    $button-warning-bg:         $warning-color                          !default;
+    $button-warning-border:     $button-warning-bg                      !default;
+
+    $button-danger-color:       $white                                  !default;
+    $button-danger-bg:          $danger-color                           !default;
+    $button-danger-border:      $button-danger-bg                       !default;
+
+
+///
+///  CALLOUT(S)
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    $callout-background:        $snow                                   !default;
+    $callout-background-fade:   85%                                     !default;    /// ~85%
+    $callout-padding:           ($spacer * 2) ($spacer * 1.5)           !default;    /// ~20px 15px
+    $callout-margin-bottom:     $global-margin                          !default;
+    $callout-border:            1px solid $smoke                        !default;
+    $callout-border-secondary:  1px solid $secondary-color              !default;
+    $callout-border-success:    1px solid $success-color                !default;
+    $callout-border-warning:    1px solid $warning-color                !default;
+    $callout-border-alert:      1px solid $alert-color                  !default;
+
+
+///
+///  MENU(S)
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    $menu-item-padding:         $spacer           !default;    /// ~10px
+    $menu-item-gutter:          $spacer           !default;    /// ~10px
+    $menu-item-color:           $primary-color    !default;
+
+
+///
+///  THUMBNAIL(S)
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    $thumbnail-border:          4px solid $snow                             !default;
+    $thumbnail-margin-bottom:   $global-margin                              !default;
+    $thumbnail-shadow:          0 0 0 1px rgba($dark-gray, 0.2)             !default;
+    $thumbnail-shadow-hover:    0 0 6px 1px rgba($primary-color, 0.5)       !default;
+    $thumbnail-transition:      200ms box-shadow ease-out                   !default;
+    $thumbnail-radius:          $global-radius                              !default;
+
+
+///
+///  ADDITIONAL COMPONENTS
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+
+

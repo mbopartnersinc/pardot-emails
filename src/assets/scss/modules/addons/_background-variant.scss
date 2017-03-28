@@ -1,0 +1,14 @@
+/// -------------------------
+/// BACKGROUND VARIANTS
+/// -------------------------
+    @mixin bg-variant($parent, $color) {
+        #{$parent} {
+            color: #fff !important;
+            background-color: $color !important;
+        }
+        a#{$parent} {
+            @include hover-focus {
+                background-color: darken($color, 10%);
+            }
+        }
+    }

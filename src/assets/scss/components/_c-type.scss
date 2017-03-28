@@ -1,0 +1,229 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  TYPOGRAPHY
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+
+
+
+///
+///  HEADINGS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+
+
+
+///
+///  BODY
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    body,
+    table.body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    td,
+    th,
+    a {
+        color: $global-font-color;
+        font-family: $body-font-family;
+        font-weight: $global-font-weight;
+        line-height: $global-line-height;
+        margin: 0;
+        Margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $header-color;
+        font-family: $header-font-family;
+        font-weight: $header-font-weight;
+        margin-bottom: $header-margin-bottom;
+        Margin-bottom: $header-margin-bottom;
+        word-wrap: normal;
+    }
+
+
+    h1 { font-size: $h1-font-size; }
+    h2 { font-size: $h2-font-size; }
+    h3 { font-size: $h3-font-size; }
+    h4 { font-size: $h4-font-size; }
+    h5 { font-size: $h5-font-size; }
+    h6 { font-size: $h6-font-size; }
+
+    body,
+    table.body,
+    p,
+    td,
+    th {
+        font-size: $global-font-size;
+        line-height: $body-line-height;
+    }
+
+    p {
+        margin-bottom: $paragraph-margin-bottom;
+        Margin-bottom: $paragraph-margin-bottom;
+
+        &.lead {
+            font-size: $lead-font-size;
+            line-height: $lead-line-height;
+        }
+
+        &.subheader {
+            color: $subheader-color;
+            font-weight: $subheader-font-weight;
+            line-height: $subheader-line-height;
+            margin-bottom: $subheader-margin-bottom;
+            margin-top: $subheader-margin-top;
+            Margin-bottom: $subheader-margin-bottom;
+            Margin-top: $subheader-margin-top;
+        }
+
+        /** CAPTIONS **/
+        &.caption {
+            color: $caption-font-color;
+            // font-size: $caption-font-size;
+            // font-weight: $global-font-weight;
+            line-height: $caption-line-height;
+        }
+    }
+
+    small {
+        color: $small-font-color;
+        font-size: $small-font-size;
+    }
+
+    a {
+        color: $anchor-color;
+        text-decoration: $anchor-text-decoration;
+        &:hover {
+            color: $anchor-color-hover;
+        }
+        &:active {
+            color: $anchor-color-active;
+        }
+        &:visited {
+            color: $anchor-color-visited;
+        }
+    }
+
+    h1 a,
+    h1 a:visited,
+    h2 a,
+    h2 a:visited,
+    h3 a,
+    h3 a:visited,
+    h4 a,
+    h4 a:visited,
+    h5 a,
+    h5 a:visited,
+    h6 a,
+    h6 a:visited {
+        color: $anchor-color;
+        font-weight: $header-font-weight;
+    }
+
+    pre {
+        background: $light-gray;
+        margin: 30px 0;
+        Margin: 30px 0;
+        code {
+            color: $medium-gray;
+            span.callout {
+                color: $dark-gray;
+                font-weight: bold;
+            }
+            span.callout-strong {
+                color: $pre-color;
+                font-weight: bold;
+            }
+        }
+    }
+
+    // Use to style a large number to display a statistic
+    .stat {
+        font-size: $stat-font-size;
+        line-height: 1;
+        p + & {
+            margin-top: -16px;
+            Margin-top: -16px;
+        }
+    }
+
+    // preheader styles
+    span.preheader {
+        display: none !important;
+        visibility: hidden;
+        mso-hide: all !important;
+        font-size: 1px;
+        color: $body-background; // needs to match background color of it's container
+        line-height: 1px;
+        max-height: 0px;
+        max-width: 0px;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+
+///
+///  INTRO GREETING
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .user__name {
+        color: $mbo-black;
+        font-family: $font-family-sans-serif;
+        font-size: $h3-font-size;
+        font-weight: $font-weight-semibold;
+        line-height: $global-line-height;
+
+        &.light {
+            font-weight: $font-weight-light;
+        }
+    }
+
+
+///
+///  MATCH QUALITY
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .match-quality {
+        font-family: $font-family-sans-serif;
+        font-size: $global-font-size;
+        font-weight: $font-weight-semibold;
+        line-height: $subheader-lineheight;
+        margin: 0 0 $spacer;
+        Margin: 0 0 $spacer;
+
+        &.perfect {
+            color: $mbo-red;
+        }
+        &.great {
+            color: $mbo-blue;
+        }
+        &.good {
+            color: $silver;
+        }
+    }
+
+    .opp-title {
+        color: $mbo-black;
+        font-family: $font-family-sans-serif;
+        font-size: $h5-font-size;
+        font-weight: $font-weight-bold;
+        line-height: $global-line-height;
+    }
+

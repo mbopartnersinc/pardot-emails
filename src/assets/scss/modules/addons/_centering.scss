@@ -1,0 +1,48 @@
+/// -------------------------
+/// CENTERING
+/// -------------------------
+
+    /// Center-Align a block level element, including text
+    @mixin centered() {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+
+    /**
+     * Center-Align with respect to parent container
+     * @Author: Chris Coyier
+     * @Source: http://codepen.io/chriscoyier/blog/some-mini-sass-mixins-i-like
+     * A darn fine way to center something, even when:
+     * 1. You don't know how big it is
+     * 2. You don't know how big the container is either
+     */
+    @mixin centerer {
+        @include transform(translate(-50%, -50%));
+        left: 50%;
+        position: absolute;
+        top: 50%;
+    }
+
+
+/// BOOTSTRAP CENTERING
+/// -------------------------
+    /// Center-align a block level element
+    @mixin center-block() {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+/// NAVBAR VERTICAL-ALIGNMENT
+/// -------------------------
+    /// Vertically center elements in the navbar.
+    /// Example: an element has a height of 30px, so write out `.navbar-vertical-align(30px);` to calculate the appropriate top margin.
+
+    @mixin navbar-vertical-align($element-height) {
+        margin-top: (($navbar-height - $element-height) / 2);
+        margin-bottom: (($navbar-height - $element-height) / 2);
+    }

@@ -1,0 +1,47 @@
+/// -------------------------
+/// TEXT-DECORATION
+/// -------------------------
+    @mixin text-decoration($value) {
+        /// <text-decoration-line> || <text-decoration-style> || <text-decoration-color>
+        @include prefixer(text-decoration, $value, moz);
+    }
+
+    @mixin text-decoration-line($line: none) {
+        /// none || underline || overline || line-through
+        @include prefixer(text-decoration-line, $line, moz);
+    }
+
+    @mixin text-decoration-style($style: solid) {
+        /// solid || double || dotted || dashed || wavy
+        @include prefixer(text-decoration-style, $style, moz webkit);
+    }
+
+    @mixin text-decoration-color($color: currentColor) {
+        /// currentColor || <color>
+        @include prefixer(text-decoration-color, $color, moz);
+    }
+
+
+/// -------------------------
+/// TEXT-EMPHASIS
+/// -------------------------
+    /// [converter] $parent hack
+    @mixin text-emphasis-variant($parent, $color) {
+        #{$parent} {
+            color: $color;
+        }
+        a#{$parent}:hover {
+            color: darken($color, 10%);
+        }
+    }
+
+
+/// -------------------------
+/// TEXT-OVERFLOW
+/// -------------------------
+    /// Requires inline-block or block for proper styling
+    @mixin text-overflow() {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }

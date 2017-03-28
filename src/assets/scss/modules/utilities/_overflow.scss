@@ -1,0 +1,20 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  OVERFLOW
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    .overflow__scroll {
+
+        /** HIDE THE HORIZONTAL SCROLL-BARS **/
+        &.overflow-x {
+            @include hide-scrollbars();
+            overflow-x: scroll;
+        }
+
+        /** HIDE THE VERTICAL SCROLL-BARS **/
+        &.overflow-y {
+            @include hide-scrollbars();
+            overflow-y: scroll;
+        }
+    }

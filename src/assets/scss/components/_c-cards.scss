@@ -1,0 +1,65 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  CARDS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+
+
+
+///
+///  CARD CONTAINERS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .row__cards {}
+
+    .row__cards-title {}
+
+
+///
+///  BASE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .card {}
+
+
+///
+///  FIXED HEIGHT CARDS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .card__fixed-height {
+
+        table.callout {
+            // height: ($spacer * 20);    /// ~200px
+            // padding: 0 !important;
+        }
+        th.callout-inner {
+            // height: 100%;
+            // max-height: ($spacer * 16);    /// ~160px
+            // margin: 0 !important;
+            // padding: ($spacer * 2) $spacer;
+            // vertical-align: top;
+        }
+    }
+
+
+///
+///  CARD VARIATIONS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    /** MATCHES CARD **/
+    .card__matches {}
+
+    /** MESSAGES CARD **/
+    .card__messages {}
+
+    /** SINGLE OPPORTUNITY CARD **/
+    .card__opportunity {}
+
+    /** MULTIPLE OPPORTUNITIES CARD **/
+    .card__opportunities {}
+
+    /** RESPONDENTS CARD **/
+    .card__respondents {}
+

@@ -1,0 +1,72 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  ICONS - (FONTS)
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+///
+///  FONT-AWESOME
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    /**
+     *  Font Awesome 4.6.3
+     *  @AUTHOR:  @davegandy
+     *  @SOURCE:  http://fontawesome.io - @fontawesome
+     *  @LICENSE: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+     */
+
+    @import 'fontawesome/variables';
+    @import 'fontawesome/mixins';
+    @import 'fontawesome/path';
+    @import 'fontawesome/core';
+    @import 'fontawesome/larger';
+    @import 'fontawesome/fixed-width';
+    @import 'fontawesome/list';
+    @import 'fontawesome/bordered-pulled';
+    @import 'fontawesome/animated';
+    @import 'fontawesome/rotated-flipped';
+    @import 'fontawesome/stacked';
+    @import 'fontawesome/icons';
+    @import 'fontawesome/screen-reader';
+
+
+
+///
+///  MATERIAL DESIGN ICONS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    /**
+     *  Font Awesome 0.0.2
+     *  @AUTHOR:  @
+     *  @SOURCE:  @
+     *  @LICENSE: @
+     */
+
+    @include font-face('Material Icons', '../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular', 400, normal);
+
+
+    .material-icons {
+        display: inline-block;
+        font-family: 'Material Icons';
+        font-size: 24px; /* Preferred Icon Size */
+        font-style: normal;
+        font-weight: normal;
+        height: 1em;
+        letter-spacing: normal;
+        line-height: 1;
+        text-transform: none;
+        width: 1em;
+        word-wrap: normal;
+
+        /* Support for all WebKit Browsers. */
+        -webkit-font-smoothing: antialiased;
+
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+    }
+

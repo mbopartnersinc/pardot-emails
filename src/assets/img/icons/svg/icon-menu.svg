@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path id="top" d="M0,28.0155642 L224.124514,28.0155642 C410.894942,28.0155642 317.509728,326.848249 205.447471,214.785992 L0,9.3385214"></path>
+    <path id="middle" d="M0,121.400778 L224.124514,121.400778"></path>
+    <path id="bottom" d="M0,18.6770428 L224.124514,18.6770428 C410.894942,18.6770428 317.509728,317.509728 205.447471,205.447471 L0,0" transform="translate(480, 320) scale(1, -1) translate(-480, -318)"></path>
+</svg>

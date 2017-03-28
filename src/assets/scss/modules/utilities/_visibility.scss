@@ -1,0 +1,48 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  VISIBILITY
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+///
+///  INVISIBLE CONTENT
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .invisible {
+        visibility: hidden !important;
+    }
+
+
+///
+///  PRINT UTILITIES
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  Media queries are placed on the inside to be mixin-friendly.
+///
+    .visible-print-block {
+        display: none !important;
+
+        @media print {
+            display: block !important;
+        }
+    }
+    .visible-print-inline {
+        display: none !important;
+
+        @media print {
+            display: inline !important;
+        }
+    }
+    .visible-print-inline-block {
+        display: none !important;
+
+        @media print {
+            display: inline-block !important;
+        }
+    }
+
+    .hidden-print {
+        @media print {
+            display: none !important;
+        }
+    }

@@ -1,0 +1,182 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+///
+///  MATERIAL DESIGN COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    @import 'material-colors';
+
+
+///
+///  PRIMARY COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    $mbo-red:               #f84b4b           !default;
+    $mbo-red-dark:          #c63c3c           !default;
+    $mbo-red-light:         #ff8e8c           !default;
+
+    $mbo-black:             #3e434a           !default;
+    $mbo-black-dark:        #31353b           !default;
+    $mbo-black-light:       #858689           !default;
+
+    $mbo-blue:              #55c8fc           !default;
+    $mbo-blue-dark:         #44a0c9           !default;
+    $mbo-blue-light:        #9edffe           !default;
+
+///
+///  SECONDARY COLORS - (FEEDBACK)
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    $red-active:            $mbo-red          !default;
+
+    $success-color:         #95bf15           !default;
+    $success-bg:            #dff1cd           !default;
+    $success-border:        $success-color    !default;
+
+    $info-color:            #55c8fc           !default;
+    $info-bg:               #ddf4fe           !default;
+    $info-border:           $info-color       !default;
+
+    $warning-color:         #ffc82c           !default;
+    $warning-bg:            #ffeec0           !default;
+    $warning-border:        $warning-color    !default;
+
+    $error-color:           #c63c3c           !default;
+    $error-bg:              #f9ebe9           !default;
+    $error-border:          $error-color      !default;
+
+
+///
+///  NEUTRAL COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    $black:                 #000000           !default;
+    $white:                 #ffffff           !default;
+    $silver:                #80879c           !default;
+
+    $smoke:                 #d0d6e1           !default;
+    $smoke-dark:            #c0ccda           !default;
+    $snow:                  #f7f7f7           !default;
+    $snow-dark:             #e8ebed           !default;
+
+    $blue-neutral:          $smoke            !default;
+    $gray-module-banner:    $snow-dark        !default;
+    $gray-text-box:         $snow             !default;
+
+    $body-bg:               #f7f9fa           !default;
+    $container-border:      #dbdbdb           !default;
+    $gray-border:           #adb4c3           !default;
+    $gray-shadow:           #b6c5d4           !default;    /// rgba(182, 197, 212, 1.0)
+
+
+    $icon-red-bg:             #ffbebe         !default;    ///  rgba(255, 190, 190, 1.0)
+    $icon-red-outline:        $red-active     !default;
+
+    $icon-green-bg:           #95bf15         !default;    ///  rgba(149, 191, 21, 1.0)
+
+    $icon-light-gray-bg:      #d8d8d8         !default;    ///  rgba(216, 216, 216, 1.0)
+    $icon-gray-bg:            #212429         !default;    ///  rgba(33, 36, 41, 1.0)
+    $icon-gray-outline:       #80879c         !default;    ///  rgba(128, 135, 156, 1.0)
+
+    $icon-blue-outline:       #00b5ff         !default;    ///  rgba(0, 181, 255, 1.0)
+    $icon-orange-outline:     #ff7840         !default;    ///  rgba(255, 120, 64, 1.0)
+
+    $icon-yellow-bg:          #e6b62d         !default;    ///  rgba(230, 182, 45, 1.0)
+    $icon-yellow-outline:     #ffc900         !default;    ///  rgba(255, 201, 0, 1.0)
+
+
+///
+///  TYPOGRAPHY COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    $text-primary:            $black                          !default;    ///  rgba(0, 0, 0, 1.0)
+    $text-secondary:          rgba($text-primary, 0.60)       !default;
+    $text-disabled:           rgba($text-primary, 0.38)       !default;
+
+    $text-alt-primary:        $white                          !default;    ///  rgba(255, 255, 255, 1.0)
+    $text-alt-secondary:      rgba($text-alt-primary, 0.70)   !default;
+    $text-alt-disabled:       rgba($text-alt-primary, 0.30)   !default;
+
+    $dropdown-highlight:      rgba(1, 124, 224, 0.15)         !default;
+
+    $input-placeholder:       $text-disabled                  !default;
+    $input-label:             $text-secondary                 !default;
+    $input-bg:                $gray-text-box                  !default;
+    $input-color:             $black                          !default;
+    $input-disabled-bg:       $smoke-dark                     !default;
+    $input-disabled-color:    $snow-dark                     !default;
+
+
+    $state-success-color:     $success-color                  !default;
+    $state-success-bg:        $success-bg                     !default;
+    $state-success-border:    $success-border                 !default;
+
+    $state-info-color:        $info-color                     !default;
+    $state-info-bg:           $info-bg                        !default;
+    $state-info-border:       $info-border                    !default;
+
+    $state-warning-color:     $warning-color                  !default;
+    $state-warning-bg:        $warning-bg                     !default;
+    $state-warning-border:    $warning-border                 !default;
+
+    $state-error-color:       $error-color                    !default;
+    $state-error-bg:          $error-bg                       !default;
+    $state-error-border:      $error-border                   !default;
+
+
+///
+///  MISC. COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    $code-bg-color:           #f5f6f7                         !default;
+    $code-text-color:         #5c707a                         !default;
+
+    $kbd-text-color:          $white                          !default;
+    $kbd-bg-color:            $code-text-color                !default;
+
+    $pre-bg-color:            $code-bg-color                  !default;
+    $pre-text-color:          $code-text-color                !default;
+
+
+///
+///  ELEVATION SHADOW LAYERS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    $md-whiteframe-2dp:     0px 1px 5px 0px   rgba($gray-shadow, 0.2),
+                            0px 2px 2px 0px   rgba($gray-shadow, 0.14),
+                            0px 3px 1px -2px  rgba($gray-shadow, 0.12);
+
+    $md-whiteframe-4dp:     0px 2px 4px -1px  rgba($gray-shadow, 0.2),
+                            0px 4px 5px 0px   rgba($gray-shadow, 0.14),
+                            0px 1px 10px 0px  rgba($gray-shadow, 0.12);
+
+    $md-whiteframe-6dp:     0px 3px 5px -1px  rgba($gray-shadow, 0.2),
+                            0px 6px 10px 0px  rgba($gray-shadow, 0.14),
+                            0px 1px 18px 0px  rgba($gray-shadow, 0.12);
+
+    $md-whiteframe-8dp:     0px 5px 5px -3px  rgba($gray-shadow, 0.2),
+                            0px 8px 10px 1px  rgba($gray-shadow, 0.14),
+                            0px 3px 14px 2px  rgba($gray-shadow, 0.12);
+
+    $md-whiteframe-10dp:    0px 6px 6px -3px  rgba($gray-shadow, 0.2),
+                            0px 10px 14px 1px rgba($gray-shadow, 0.14),
+                            0px 4px 18px 3px  rgba($gray-shadow, 0.12);
+
+
+///
+///  CORPORATE BRAND COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    @import 'web-colors';
+
+

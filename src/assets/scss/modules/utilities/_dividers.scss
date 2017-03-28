@@ -1,0 +1,23 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  DIVIDERS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    hr.divider {
+        border: 0;
+        border-top: $border-width solid $snow-dark;
+        display: block;
+        margin-bottom: $spacer-y;
+        margin-top: $spacer-y;
+        position: relative;
+        width: 100%;
+
+        /** INSET DIVIDERS **/
+        &.inset {
+            left: 72px;
+            margin: 0 !important;
+            padding: 0;
+            width: calc(100% - 72px);
+        }
+    }

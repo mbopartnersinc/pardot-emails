@@ -1,0 +1,54 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  SCAFFOLDING
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+///
+///  FOR VIEWING EMAIL IN THE BROWSER
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    @media only screen {
+        html {
+            background: $body-background;
+            min-height: 100%;
+        }
+    }
+
+    html,
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    html,
+    body,
+    table.body {
+        background: $body-background;
+        font-family: $body-font-family;
+        font-size: $global-font-size;
+        font-weight: $global-font-weight;
+        height: 100%;
+        line-height: $body-line-height;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+    }
+
+    /** THE MAIN CONTENT REGION IN THE MIDDLE **/
+    .container {
+        &.wrapper__main {
+            background: $container-background;
+            border: $border-width solid $container-border;
+            margin: 0 auto;
+            Margin: 0 auto;
+            text-align: inherit;
+            width: $global-width;
+        }
+    }
+

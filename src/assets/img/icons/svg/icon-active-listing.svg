@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-active-listing</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-active-listing" fill="#000000">
+            <g transform="translate(4.000000, 1.000000)" id="Shape">
+                <path d="M9.5,0.67 C9.5,0.67 10.24,3.32 10.24,5.47 C10.24,7.53 8.89,9.2 6.83,9.2 C4.76,9.2 3.2,7.53 3.2,5.47 L3.23,5.11 C1.21,7.51 0,10.62 0,14 C0,18.42 3.58,22 8,22 C12.42,22 16,18.42 16,14 C16,8.61 13.41,3.8 9.5,0.67 L9.5,0.67 L9.5,0.67 Z M7.71,19 C5.93,19 4.49,17.6 4.49,15.86 C4.49,14.24 5.54,13.1 7.3,12.74 C9.07,12.38 10.9,11.53 11.92,10.16 C12.31,11.45 12.51,12.81 12.51,14.2 C12.51,16.85 10.36,19 7.71,19 L7.71,19 L7.71,19 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,139 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  SPACING
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+///
+///  WIDTH
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .w-100 { width: 100% !important; }
+
+
+///
+///  MARGIN AND PADDING
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .m-x-auto {
+        margin-left:  auto !important;
+        margin-right: auto !important;
+    }
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+        @each $size, $lengths in $spacers {
+            $length-x:   map-get($lengths, x);
+            $length-y:   map-get($lengths, y);
+
+            .#{$abbrev}-a-#{$size} { #{$prop}:        $length-y $length-x !important; }    /// a = All sides
+            .#{$abbrev}-t-#{$size} { #{$prop}-top:    $length-y !important; }
+            .#{$abbrev}-r-#{$size} { #{$prop}-right:  $length-x !important; }
+            .#{$abbrev}-b-#{$size} { #{$prop}-bottom: $length-y !important; }
+            .#{$abbrev}-l-#{$size} { #{$prop}-left:   $length-x !important; }
+
+            /** AXES **/
+            .#{$abbrev}-x-#{$size} {
+                #{$prop}-right:  $length-x !important;
+                #{$prop}-left:   $length-x !important;
+            }
+            .#{$abbrev}-y-#{$size} {
+                #{$prop}-top:    $length-y !important;
+                #{$prop}-bottom: $length-y !important;
+            }
+        }
+    }
+
+
+///
+///  MARGIN ADJUSTMENTS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .margin {
+        &-y {
+            margin-bottom: $spacer-y;
+            margin-top: $spacer-y;
+        }
+        &-x {
+            margin-left: $spacer-x;
+            margin-right: $spacer-x;
+        }
+    }
+    .margin-top {
+        margin-top: $spacer-y;
+    }
+    .margin-right {
+        margin-right: $spacer-x;
+    }
+    .margin-bottom {
+        margin-bottom: $spacer-y;
+    }
+    .margin-left {
+        margin-left: $spacer-x;
+    }
+
+    /* REMOVING MARGIN */
+    .no-margin {
+        &-x {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        &-y {
+            margin-bottom: 0 !important;
+            margin-top: 0 !important;
+        }
+        &.top {
+            margin-top: 0 !important;
+        }
+        &.right {
+            margin-right: 0 !important;
+        }
+        &.bottom {
+            margin-bottom: 0 !important;
+        }
+        &.left {
+            margin-left: 0 !important;
+        }
+    }
+
+
+///
+///  PADDING ADJUSTMENTS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    /* REMOVING PADDING */
+    .no-padding {
+        &-x {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        &-y {
+            padding-bottom: 0 !important;
+            padding-top: 0 !important;
+        }
+        &.top {
+            padding-top: 0 !important;
+        }
+        &.right {
+            padding-right: 0 !important;
+        }
+        &.bottom {
+            padding-bottom: 0 !important;
+        }
+        &.left {
+            padding-left: 0 !important;
+        }
+    }
+
+
+///
+///  POSITIONING
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    // .pos-f-t {
+    //     left: 0;
+    //     position: fixed;
+    //     right: 0;
+    //     top: 0;
+    //     z-index: $zindex-navbar-fixed;
+    // }

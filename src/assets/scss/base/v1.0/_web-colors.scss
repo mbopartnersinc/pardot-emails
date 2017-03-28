@@ -1,0 +1,91 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  WEB-APPLICATION COLOR PALETTES
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+///
+///  SOCIAL MEDIA
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    /* COMMON */
+    $facebook:              rgba(59, 89, 152, 1.0)      !default;    /// #3b5998
+    $google-plus:           rgba(221, 75, 57, 1.0)      !default;    /// #dd4b39
+    $instagram:             rgba(63, 114, 155, 1.0)     !default;    /// #3f729b
+
+    /* LINKEDIN */
+    $linkedin:              rgba(0, 119, 181, 1.0)      !default;    /// #0077b5
+    $linkedin-dark:         rgba(0, 0, 0, 1.0)          !default;    /// #000000
+    $linkedin-gray1:        rgba(49, 51, 53, 1.0)       !default;    /// #313335
+    $linkedin-gray2:        rgba(134, 136, 138, 1.0)    !default;    /// #86888a
+    $linkedin-gray3:        rgba(202, 204, 206, 1.0)    !default;    /// #caccce
+    $linkedin-accent-1:     rgba(0, 160, 220, 1.0)      !default;    /// #00a0dc
+    $linkedin-accent-2:     rgba(141, 108, 171, 1.0)    !default;    /// #8d6cab
+    $linkedin-accent-3:     rgba(221, 81, 67, 1.0)      !default;    /// #dd5143
+    $linkedin-accent-4:     rgba(230, 133, 35, 1.0)     !default;    /// #e68523
+
+    /* REDDIT */
+    $reddit-orange:         rgba(255, 69, 0, 1.0)       !default;    /// #ff4500
+    $reddit-dark:           rgba(95, 153, 207, 1.0)     !default;    /// #5f99cf
+    $reddit-light:          rgba(206, 227, 248, 1.0)    !default;    /// #cee3f8
+
+    /* SLACK */
+    $slack-blue:            rgba(110,202,220,1.0)       !default;    /// #6ecadc
+    $slack-yellow:          rgba(233,168,32,1.0)        !default;    /// #e9a820
+    $slack-red:             rgba(224,21,99,1.0)         !default;    /// #e01563
+    $slack-green:           rgba(62,185,145,1.0)        !default;    /// #3eb991
+
+    /* TWITTER */
+    $twitter-blue:          rgba(85, 172, 238, 1.0)     !default;    /// #55acee
+    $twitter-dark:          rgba(41, 47, 51, 1.0)       !default;    /// #292f33
+    $twitter-gray1:         rgba(102, 117, 127, 1.0)    !default;    /// #66757f
+    $twitter-gray2:         rgba(136, 153, 166, 1.0)    !default;    /// #8899a6
+    $twitter-gray3:         rgba(204, 214, 221, 1.0)    !default;    /// #ccd6dd
+    $twitter-gray4:         rgba(225, 232, 237, 1.0)    !default;    /// #e1e8ed
+    $twitter-gray5:         rgba(245, 248, 250, 1.0)    !default;    /// #f5f8fa
+
+    /* YOUTUBE */
+    $youtube-red1:          rgba(229, 45, 39, 1.0)      !default;    /// #e52d27
+    $youtube-red2:          rgba(179, 18, 23, 1.0)      !default;    /// #b31217
+    $youtube-dark:          rgba(0, 0, 0, 1.0)          !default;    /// #000000
+
+
+///
+///  MISC. WEB-APPLICATIONS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    $amazon-orange:         rgba(255, 153, 0, 1.0)      !default;    /// #ff9900
+    $amazon-blue:           rgba(20, 110, 180, 1.0)     !default;    /// #146eb4
+    $bing:                  rgba(255, 185, 0, 1.0)      !default;    /// #ffb900
+    $github-blue:           rgba(65, 131, 196, 1.0)     !default;    /// #4183c4
+    $github-gray1:          rgba(153, 153, 153, 1.0)    !default;    /// #999999
+    $github-gray2:          rgba(102, 102, 102, 1.0)    !default;    /// #666666
+    $github-dark:           rgba(51, 51, 51, 1.0)       !default;    /// #333333
+    $github-green:          rgba(108, 198, 68, 1.0)     !default;    /// #6cc644
+    $github-red:            rgba(189, 44, 0, 1.0)       !default;    /// #bd2c00
+    $github-orange:         rgba(255, 153, 51, 1.0)     !default;    /// #f93f93
+    $google-blue:           rgba(66, 133, 244, 1.0)     !default;    /// #4285f4
+    $google-orange:         rgba(219, 68, 55, 1.0)      !default;    /// #db4437
+    $google-yellow:         rgba(244, 180, 0, 1.0)      !default;    /// #f4b400
+    $google-green:          rgba(15, 157, 88, 1.0)      !default;    /// #0f9d58
+    $google-light:          rgba(231, 230, 221, 1.0)    !default;    /// #e7e6dd
+    $ie:                    rgba(0, 204, 255, 1.0)      !default;    /// #0cf0cf
+    $jira:                  rgba(0, 51, 102, 1.0)       !default;    /// #003366
+    $lynda:                 rgba(255, 212, 0, 1.0)      !default;    /// #ffd400
+    $microsoft-orange:      rgba(246, 83, 20, 1.0)      !default;    /// #f65314
+    $microsoft-green:       rgba(124, 187, 0, 1.0)      !default;    /// #7cbb00
+    $microsoft-blue:        rgba(0, 161, 241, 1.0)      !default;    /// #00a1f1
+    $microsoft-yellow:      rgba(255, 187, 0, 1.0)      !default;    /// #ffbb00
+    $microsoft-office:      rgba(234, 62, 35, 1.0)      !default;    /// #ea3e23
+    $ms-excel:              rgba(0, 134, 65, 1.0)       !default;    /// #008641
+    $ms-outlook:            rgba(0, 114, 198, 1.0)      !default;    /// #0072c6
+    $ms-powerpoint:         rgba(240, 78, 35, 1.0)      !default;    /// #f04e23
+    $ms-word:               rgba(0, 84, 166, 1.0)       !default;    /// #0054a6
+    $pardot:                rgba(0, 157, 220, 1.0)      !default;    /// #009ddc
+    $rss:                   rgba(242, 101, 34, 1.0)     !default;    /// #f26522
+    $salesforce:            rgba(23, 152, 193, 1.0)     !default;    /// #1798c1
+    $salesforce-orange:     rgba(255, 17, 0, 1.0)       !default;    /// #ff1100
+    $skype:                 rgba(0, 175, 240, 1.0)      !default;    /// #00aff0
+    $spotify:               rgba(122, 184, 0, 1.0)      !default;    /// #7ab800
+    $sterling:              rgba(83, 177, 205, 1.0)     !default;    /// #53b1cd
+    $time-off:              rgba(68, 136, 171, 1.0)     !default;    /// #4488ab
+    $yahoo:                 rgba(64, 1, 145, 1.0)       !default;    /// #400191

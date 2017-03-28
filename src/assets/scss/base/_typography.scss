@@ -1,0 +1,73 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  TYPOGRAPHY - (MIXINS)
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    /**
+     *  Uncomment this line if you want to host fonts locally,
+     *  instead importing them via Google Fonts.
+     */
+    // @import 'font-face';
+
+
+///
+///  OPEN SANS
+///  @SOURCE: https://www.google.com/fonts/specimen/Open+Sans
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    @mixin opensans-light {
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+    }
+    @mixin opensans-light-italic {
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        font-style: italic;
+        font-weight: 300;
+    }
+    @mixin opensans {
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+    @mixin opensans-italic {
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+    }
+    @mixin opensans-semibold {
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+    }
+    @mixin opensans-semibold-italic {
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        font-style: italic;
+        font-weight: 600;
+    }
+    @mixin opensans-bold {
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+    }
+    @mixin opensans-bold-italic {
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        font-style: italic;
+        font-weight: 700;
+    }
+    @mixin opensans-extrabold {
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+    }
+    @mixin opensans-extrabold-italic {
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        font-style: italic;
+        font-weight: 800;
+    }
+
+
+
+

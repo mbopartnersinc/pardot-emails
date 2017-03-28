@@ -1,0 +1,40 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  AVAILABILITY TEMPLATE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+///
+///  BASE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .availability__title {
+        font-size: $h5-font-size;
+        font-weight: $font-weight-bold;
+        line-height: $h3-font-size;    /// ~24px
+        text-transform: uppercase;
+    }
+
+
+
+
+///
+///  FIXED HEIGHT CARDS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .card__fixed-height {
+        &.section__availability {
+            table.callout {
+                height: ($spacer * 30);    /// ~300px
+
+                /* SMALL DISPLAYS only */
+                @media only screen and (max-width: #{$global-breakpoint}) {
+                    height: ($spacer * 20);    /// ~200px
+                }
+            }
+        }
+    }
+
+
+

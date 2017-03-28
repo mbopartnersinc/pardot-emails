@@ -1,0 +1,43 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  FOOTER
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+
+
+
+///
+///  BASE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .footer {
+        p {
+            font-size: $h6-font-size;
+            line-height: floor($h6-font-size * 1.625);
+
+            b, strong {
+                @include opensans-semibold;
+            }
+            a {
+                @include opensans-semibold;
+            }
+        }
+
+        .logo-link {
+            display: inline-block;
+        }
+    }
+
+
+
+
+///
+///  STYLES #2
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+
+

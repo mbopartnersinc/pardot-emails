@@ -1,0 +1,37 @@
+---
+layout: index-layout
+subject: PARDOT EMAIL TEMPLATE TEST
+description: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+---
+
+{{>intro-greeting}}
+
+
+{{!-- NEW MATCHES --}}
+
+    {{> new-match-card}}
+    {{> divider}}
+
+
+{{!-- NEW RESPONSES --}}
+
+    {{> new-response-card}}
+    {{> divider}}
+
+
+{{!-- NEW MESSAGES SECTION --}}
+
+    {{> new-message-card}}
+    {{> divider}}
+
+{{!-- AVAILABILITY CARDS --}}
+<row class="row__cards card__fixed-height section__availability" pardot-removable="button-examples">
+    <columns small="12" large="6">
+        {{> available-now}}
+    </columns>
+
+    <columns small="12" large="6">
+        {{> not-available}}
+    </columns>
+</row>
+

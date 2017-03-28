@@ -1,0 +1,91 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  DIVIDERS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+///
+///  BASE STYLES
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    table.hr {
+        width: 100%;
+        th {
+            border-bottom: $hr-border;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            clear: both;
+            height: 0;
+            margin: $hr-margin;
+            Margin: $hr-margin;
+            max-width: $hr-width;
+        }
+    }
+
+
+///
+///  FIXING FOUNDATION BUG
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  See: https://github.com/zurb/foundation-emails/issues/496
+///
+    table.hr-container {
+        margin: 0;
+        Margin: 0;
+        width: 100%;
+
+        td {
+            border: 0;
+            height: 0;
+            line-height: 0;
+            margin: 0;
+            Margin: 0;
+            padding: 0;
+
+            &.hr-margin {
+                max-width: $global-gutter;    /// And here too, because Outlook
+                width: $global-gutter;        /// specify width here too because some clients respect one over the other
+            }
+
+            &.hr-middle {
+                border-bottom: $hr-border;
+            }
+        }
+    }
+
+
+    table.hr-divider {
+        width: 100%;
+
+        td.hr-spacer {
+            font-size: 0px;
+            padding: $hr-padding;
+            word-break: break-word;
+
+            p {
+                border-top: $hr-border;
+                font-size: $hr-border-width;
+                margin: $hr-margin;
+                Margin: $hr-margin;
+                width: 100%;
+            }
+
+            table.hr-divider-ie {
+                border-top: $hr-border;
+                font-size: $hr-border-width;
+                margin: $hr-margin;
+                Margin: $hr-margin;
+                width: 100%;
+
+                td.hr-spacer-ie {
+                    height: 0;
+                    line-height: 0;
+                }
+            }
+        }
+
+    }
+
+
+

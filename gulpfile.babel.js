@@ -22,6 +22,12 @@ const EMAIL = yargs.argv.to;
 // Declar var so that both AWS and Litmus task can use it.
 var CONFIG;
 
+/** Declare the asset directories on AWS S3. **/
+var S3_BASE_URL   = 'https://s3.amazonaws.com/static.mbopartners.com';
+var S3_ASSET_PATH = 'pardot/email/assets';
+var S3_IMG_PATH   = S3_ASSET_PATH + '/img';
+var S3_IMG_URL    = S3_BASE_URL + '/' + S3_IMG_PATH;
+
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build',
   gulp.series(clean, pages, sass, images, inline));
@@ -155,12 +161,20 @@ function aws() {
   };
 
   return gulp.src('./dist/assets/img/*')
+    // Setting the upload directory.
+    .pipe($.rename(function(filePath) {
+      filePath.dirname = path.join(S3_IMG_PATH, filePath.dirname);
+    }))
+
+    // gzip, Set Content-Encoding headers and add .gz extension
+    // .pipe($.awspublish.gzip({ ext: '.gz' }))
+
     // publisher will add Content-Length, Content-Type and headers specified above
     // If not specified it will set x-amz-acl to public-read by default
     .pipe(publisher.publish(headers))
 
     // create a cache file to speed up consecutive uploads
-    //.pipe(publisher.cache())
+    .pipe(publisher.cache())
 
     // print upload updates to console
     .pipe($.awspublish.reporter());
@@ -179,13 +193,14 @@ function litmus() {
 // Send email to specified email for testing. If no AWS creds then do not replace img urls.
 function mail() {
   var awsURL = !!CONFIG && !!CONFIG.aws && !!CONFIG.aws.url ? CONFIG.aws.url : false;
+  var AWS_IMG_URL = S3_IMG_URL;
 
   if (EMAIL) {
     CONFIG.mail.to = [EMAIL];
   }
 
   return gulp.src('dist/**/*.html')
-    .pipe($.if(!!awsURL, $.replace(/=('|")(\/?assets\/img)/g, "=$1"+ awsURL)))
+    // .pipe($.if(!!awsURL, $.replace(/=('|")(\/?assets\/img)/g, "=$1"+ awsURL)))
     .pipe($.mail(CONFIG.mail))
     .pipe(gulp.dest('dist'));
 }

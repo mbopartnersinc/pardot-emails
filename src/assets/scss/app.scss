@@ -1,4 +1,56 @@
-@import 'settings';
-@import 'foundation-emails';
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  GLOBAL APP STYLES
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
 
-@import 'template/template';
+
+///
+///  BRAND NECESSITIES
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    /** IMPORT OPEN SANS FROM GOOGLE FONTS **/
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+    /** DEFAULT ICON PATH(S) **/
+    $icon-font-path: '../fonts/font-awesome'   !default;
+
+
+///
+///  CORE VARIABLES & MIXINS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    @import 'modules/m-modules';
+    @import 'base/colors';
+    @import 'base/typography';
+    @import 'base/icons';
+    @import 'modules/m-variables';
+    @import 'modules/m-utilities';
+
+
+///
+///  GLOBAL/REUSABLE ELEMENTS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    /** THIRD-PARTY COMPONENTS **/
+    @import 'vendors/v-vendors';
+
+    /** COMPONENTS **/
+    @import 'components/c-components';
+
+    /** LAYOUTS **/
+    @import 'layouts/l-layouts';
+
+
+///
+///  QUEUE UP THE TEMPLATES
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    @import 'templates/t-templates';
+
+
+
+

@@ -1,0 +1,33 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  RESPONSIVE EMBEDS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    @mixin generateRatios($width, $height, $prefix: "ratio-") {
+        $class-name: $prefix + $width + "x" + $height;
+
+        .#{$class-name} {
+            padding-bottom: ratio($width, $height);
+        }
+        /// Output example: .ratio-16x9 {}
+    }
+
+
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  SAMPLE USAGE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    /**
+     *    .embed-responsive {
+     *        /// 16:9 Aspect Ratio
+     *        @include generateRatios(16,9);
+     *
+     *        /// 14:3 Aspect Ratio
+     *        @include generateRatios(4,3);
+     *    }
+     *
+     */
+

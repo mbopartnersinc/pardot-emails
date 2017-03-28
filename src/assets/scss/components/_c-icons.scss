@@ -1,0 +1,107 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  ICONS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+
+
+
+///
+///  BASE STYLES
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+
+
+///
+///  ICON SIZING
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+    .icon-8 {
+        @include square(($spacer * 0.8));
+    }
+    .icon-10 {
+        @include square(($spacer * 1.0));
+    }
+    .icon-12 {
+        @include square(($spacer * 1.2));
+    }
+    .icon-14 {
+        @include square(($spacer * 1.4));
+    }
+    .icon-15 {
+        @include square(($spacer * 1.5));
+    }
+    .icon-16 {
+        @include square(($spacer * 1.6));
+    }
+    .icon-18 {
+        @include square(($spacer * 1.8));
+    }
+    .icon-20 {
+        @include square(($spacer * 2.0));
+    }
+    .icon-24 {
+        @include square(($spacer * 2.4));
+    }
+    .icon-30 {
+        @include square(($spacer * 3.0));
+    }
+    .icon-32 {
+        @include square(($spacer * 3.2));
+    }
+    .icon-36 {
+        @include square(($spacer * 3.6));
+    }
+    .icon-40 {
+        @include square(($spacer * 4.0));
+    }
+    .icon-44 {
+        @include square(($spacer * 4.4));
+    }
+    .icon-48 {
+        @include square(($spacer * 4.8));
+    }
+    .icon-50 {
+        @include square(($spacer * 5.0));
+    }
+    .icon-60 {
+        @include square(($spacer * 6.0));
+    }
+    .icon-64 {
+        @include square(($spacer * 6.4));
+    }
+    .icon-70 {
+        @include square(($spacer * 7.0));
+    }
+    .icon-72 {
+        @include square(($spacer * 7.2));
+    }
+    .icon-80 {
+        @include square(($spacer * 8.0));
+    }
+    .icon-90 {
+        @include square(($spacer * 9.0));
+    }
+    .icon-100 {
+        @include square(($spacer * 10.0));
+    }
+    .icon-144 {
+        @include square(($spacer * 14.4));
+    }
+
+
+///
+///  ICON VARIANTS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+    .icon-circle {
+        @include border-radius(50%);
+    }
+
+
+

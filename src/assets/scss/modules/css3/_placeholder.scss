@@ -1,0 +1,25 @@
+/// -------------------------
+/// PLACEHOLDER
+/// -------------------------
+    /**
+    @mixin placeholder($color: $input-font-color) {
+        /// Firefox
+        &::-moz-placeholder {
+            color: $color;
+            opacity: 1; /// Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+        }
+        &:-moz-input-placeholder { color: $color; } /// Older Versions of Firefox
+        &:-ms-input-placeholder { color: $color; } /// Internet Explorer 10+
+        &::-webkit-input-placeholder  { color: $color; } /// Safari and Chrome
+    }
+    */
+
+
+    @mixin placeholder {
+        $placeholders: ':-webkit-input' ':-moz' '-moz' '-ms-input';
+        @each $placeholder in $placeholders {
+            &:#{$placeholder}-placeholder {
+                @content;
+            }
+        }
+    }

@@ -1,0 +1,38 @@
+/// -------------------------
+/// ICONS
+/// -------------------------
+    /**
+     * @Author: Jayden Seric
+     * @Source: http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+     **/
+    @mixin icon($position: 'before', $icon: false) {
+        &:#{$position} {
+            @if $icon {
+                content: match($icons, $icon);
+            }
+            @content;
+        }
+    }
+
+
+/// USAGE EXAMPLE
+/// -------------------------
+    /**
+     * @USAGE EXAMPLE
+     * Create a variable with all your icons
+     * Name, Content-Value
+     * $icons: (
+     *     'checkmark' 'a',
+     *     'minus' 'b',
+     *     'plus' 'c'
+     * );
+     *
+     * @include Mixin
+     * .element {
+     *     @include icon('before', 'checkmark');
+     * }
+     * @Result
+     * .element:before {
+     *     content: "a";
+     * }
+     **/

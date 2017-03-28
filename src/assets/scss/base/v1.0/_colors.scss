@@ -1,0 +1,112 @@
+///
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///  COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+///
+
+
+///
+///  MATERIAL DESIGN COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    @import 'material-colors';
+
+
+///
+///  BLACK, GRAYS, & WHITE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    $black:                     #000000                     !default;    /// rgba(0,0,0,1.0)
+    $mbo-black:                 #3e434a                     !default;    /// rgba(62,67,74,1.0)
+    $white:                     #ffffff                     !default;    /// rgba(255,255,255,1.0)
+
+    $gray-darkest:              #333333                     !default;    /// rgba(51,51,51,1.0)
+    $gray-darker:               #525252                     !default;    /// rgba(82,82,82,1.0)
+    $gray-dark:                 #6a7077                     !default;    /// rgba(108,113,120,1.0)
+    $gray:                      #a7acb2                     !default;    /// rgba(169,174,179,1.0)
+    $gray-light:                #d6dbe1                     !default;    /// rgba(215,220,225,1.0)
+    $gray-light-1:              #ebeef1                     !default;    /// rgba(235,238,240,1.0)
+    $gray-light-2:              #edf1f4                     !default;    /// rgba(238,243,245,1.0)
+    $gray-light-3:              #f5f7f8                     !default;    /// rgba(245,248,248,1.0)
+
+
+///
+///  RED
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    $mbo-red:                   #9e4247                     !default;    /// rgba(158,66,71,1.0)
+
+    $red:                       #f8533c                     !default;    /// rgba(248,85,62,1.0)
+    $red-dark:                  darken($red, 10%)           !default;    /// #f62609
+    $red-light:                 lighten($red, 10%)          !default;    /// #fa8170
+    $red-lighter:               lighten($red, 20%)          !default;    /// #fcaca1
+    $red-lightest:              #f9ebe9                     !default;    /// rgba(250,235,233,1.0)
+
+    $red-active:                #f84b4b                     !default;    /// rgba(248,75,75,1.0)
+
+///
+///  BLUE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    $blue:                      #409dfb                     !default;    /// rgba(64,159,250,1.0)
+    $blue-darker:               darken($blue, 20%)          !default;    /// #0468cd
+    $blue-dark:                 darken($blue, 10%)          !default;    /// #0a81fa
+    $blue-light:                #b3d7fc                     !default;    /// rgba(179,215,252,1.0)
+    $blue-lighter:              #e8f3ff                     !default;    /// rgba(232,243,255,1.0)
+    $blue-lightest:             lighten($blue-light, 10%)   !default;    /// rgba(229,241,250,1.0)
+
+///
+///  TEAL
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    $teal:                      #66e0d5                     !default;    /// rgba(102,225,215,1.0)
+    $teal-dark:                 darken($teal, 10%)          !default;    /// #38d7c8
+    $teal-light:                lighen($teal, 10%)          !default;    /// #91e9e1
+    $teal-lighter:              lighten($teal, 20%)         !default;    /// #bbf1ec
+    $teal-lightest:             #e4fffd                     !default;    /// rgba(227,255,253,1.0)
+
+
+///
+///  GREEN
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    $green:                     #95bf15                     !default;    /// rgba(148,192,21,1.0)
+    $green-dark:                darken($green, 10%)         !default;    /// #6f8e10
+    $green-light:               lighten($green, 10%)        !default;    /// #b6e722
+    $green-lighter:             lighten($green, 20%)        !default;    /// #c5ec50
+    $green-lightest:            lighten($green, 30%)        !default;    /// #d5f17e
+
+
+///
+///  ORANGE
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    $orange:                    #ff9b08                     !default;    /// rgba(255,155,8,1.0)
+    $orange-dark:               darken($orange, 10%)        !default;    /// #d17c00
+    $orange-light:              lighten($orange, 10%)       !default;    /// #ffb13d
+    $orange-lighter:            lighten($orange, 20%)       !default;    /// #ffc570
+    $orange-lightest:           lighten($orange, 30%)       !default;    /// #ffdaa3
+
+
+///
+///  MISC. COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    $header-bg:                 #ebeef1                     !default;    /// rgba(235,238,241,1.0)
+    $sidenav-bg:                #282829                     !default;    /// rgba(40,40,41,1.0)
+    $sidenav-bg-active:         $gray-darker                !default;
+    $sidenav-icon:              #a7acb2                     !default;    /// rgba(167,172,178,1.0)
+
+    $subnav-bg:                 #f6f8f8                     !default;    /// rgba(246,248,248,1.0)
+
+    $dividers:                  rgba(237,240,241,1.0)       !default;    /// #edf0f1
+    $silver:                    rgba(221,221,221,1.0)       !default;    /// #dddddd
+
+    $form-input-bg:             $gray-light                 !default;
+    $form-input-color:          $gray-darkest               !default;
+    $form-input-focus:          $blue                       !default;
+    $form-input-placeholder:    $gray-light                 !default;
+    $form-slider:               #d8d8d8                     !default;    /// rgba(216,216,216,1.0)
+
+
+///
+///  TYPOGRAPHY COLORS
+/// - - - - - - - - - - - - - - - - - - - - - - - - -
+    $h1-headings:       $gray-darkest                       !default;
+    $h2-headings:       $gray-darkest                       !default;
+    $h3-headings:       $gray-darkest                       !default;
+    $h4-headings:       $black                              !default;
+    $h5-headings:       $black                              !default;
+

@@ -1,0 +1,24 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Bruce Bentley    --    Development Lead    --    https://github.com/brucebentley
+    Wan Soo Seo      --    Development Lead    --    https://github.com/swansu
+
+
+# THANKS
+
+    Gene Zaino
+    Julian Richards
+    Kurt Schwartz
+    Rob Young
+    Tyler Berg
+
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, JavaScript
+    Babel, Gulp, Node.js
+    Email, Responsive Design, Zurb Foundation
+
