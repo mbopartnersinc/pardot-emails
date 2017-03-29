@@ -119,6 +119,18 @@
         &:visited {
             color: $anchor-color-visited;
         }
+
+        /** PRIMARY COLORS **/
+        &.text-primary {
+            color: $mbo-red;
+
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited {
+                color: $mbo-red-dark;
+            }
+        }
     }
 
     h1 a,
