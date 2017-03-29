@@ -71,7 +71,8 @@
     $gray-module-banner:    $snow-dark        !default;
     $gray-text-box:         $snow             !default;
 
-    $body-bg:               #f7f9fa           !default;
+    // $body-bg:               #f7f9fa           !default;
+    $body-bg:               lighten($snow-dark, 3%) !default;
     $container-border:      #dbdbdb           !default;
     $gray-border:           #adb4c3           !default;
     $gray-shadow:           #b6c5d4           !default;    /// rgba(182, 197, 212, 1.0)
