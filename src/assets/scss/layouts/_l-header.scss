@@ -13,8 +13,20 @@
 /// - - - - - - - - - - - - - - - - - - - - - - - - -
 ///
     .header {
-        .link-logo {
-            display: block;
+        .link__logo {
+            display: inline-block;
+            margin: 0;
+            Margin: 0;
+            max-width: $global-width;
+            padding: 0;
+            width: 100%;
+
+            > img {
+                display: block;
+                height: auto;
+                max-width: $global-width;
+                width: 100%;
+            }
         }
     }
 

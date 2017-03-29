@@ -1,13 +1,29 @@
 {{!-- header.html --}}
-<row class="header collapse">
-    <columns small="12" large="12" valign="middle">
-        <!-- LOGO -->
-        <img class="logo-connect"
-            src="https://s3.amazonaws.com/static.mbopartners.com/pardot/email/assets/img/backgrounds/bg-header-email@2x.png"
-            height="70" width="600"
-            pardot-region="header-logo-section"
-            alt="MBO Connect" />
-    </columns>
-</row>
+{{!--
+    PLEASE NOTE:
+    WRITING THE LONG (NON-INKY) MARKUP FOR THE HEADER BECAUSE THE `.td-expander` CLASS WAS
+    PREVENTING THE HEADER IMAGE FROM EXPANDING TO THE FULL 600px CONTAINER WIDTH.
+--}}
+<table class="row header collapse">
+    <tbody>
+        <tr>
+            <th class="small-12 large-12 columns first last" valign="middle">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <a alt="MBO Connect" class="link__logo" href="https://connect.mbopartners.com">
+                                    <!-- LOGO -->
+                                    <img alt="MBO Connect" class="logo-connect" height="70" pardot-region="header-logo-section" src="https://s3.amazonaws.com/static.mbopartners.com/pardot/email/assets/img/backgrounds/bg-header-email@2x.png" width="600">
+                                    </img>
+                                </a>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
 
 <spacer size="40"></spacer>
