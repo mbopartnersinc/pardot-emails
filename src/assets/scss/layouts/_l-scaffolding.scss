@@ -54,19 +54,52 @@
 
 
 ///
-///  PREHEADER
+///  PREHEADER + PREVIEW TEXT
 /// - - - - - - - - - - - - - - - - - - - - - - - - -
 ///
     span.preheader {
+        background-color: $body-background;
         color: $body-background;    // needs to match background color of it's container
-        display: none !important;
-        font-size: 1px;
-        line-height: 1px;
-        max-height: 0px;
+        display: inline-block !important;
+        font-size: $global-font-size;
+        height: ($spacer * 5);
+        line-height: ($spacer * 5);
+        // line-height: 1px;
+        // max-height: 0px;
         max-width: 0px;
         mso-hide: all !important;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
         opacity: 0;
         overflow: hidden;
-        visibility: hidden;
+        padding: ($spacer * 2.5) ($spacer * 2.5);
+        visibility: visible;
+        -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
     }
+
+    span.preview-text {
+        color: $body-color;
+        display: none;
+        // font-family: $body-font-family;
+        font-size: 1px;
+        // font-size: $global-font-size;
+        // font-weight: $global-font-weight;
+        line-height: 1px;
+        // line-height: $body-line-height;
+        max-height: 0px;
+        max-width: 0px;
+        mso-hide: all;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        text-align: left;
+        visibility: hidden;
+        -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+    }
+
+
 
